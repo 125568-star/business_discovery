@@ -112,6 +112,13 @@ body{background:white;font-family:Arial,Helvetica,sans-serif;color:#11254b}
 .category-shortcuts,.features{max-width:1240px}
 @media(min-width:900px){.wrap{max-width:1300px;width:calc(100% - 110px)}.nav{min-height:98px}.hero .intro{font-size:20px}}
 @media(max-width:650px){.hero{min-height:450px;background-size:cover,auto 100%;background-position:center,right center}.hero .wrap{padding-top:38px;padding-bottom:72px}.hero h1{font-size:clamp(41px,9vw,59px)}.category-shortcuts,.features{max-width:100%}}
+
+/* Seamless skyline blend verified against live 1440px browser capture. */
+.hero{background-color:#edf7ff;background-image:url("https://images.pexels.com/photos/2516657/pexels-photo-2516657.jpeg?cs=srgb&dl=pexels-valeriiamiller-2516657.jpg&fm=jpg");background-size:auto 120%;background-position:right center;background-repeat:no-repeat}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,#edf7ff 0%,#edf7ff 28%,rgba(237,247,255,.98) 42%,rgba(237,247,255,.77) 56%,rgba(237,247,255,.25) 74%,transparent 89%)}
+.hero::after{background:none}
+.hero .wrap{position:relative;z-index:1}
+@media(max-width:650px){.hero{background-size:auto 100%;background-position:right center}.hero::before{background:linear-gradient(90deg,#edf7ff 0%,rgba(237,247,255,.93) 44%,rgba(237,247,255,.45) 83%,transparent)}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Business Discovery Network","url":"https://125568-star.github.io/business_discovery/","publisher":{"@type":"Organization","name":"Ground Support Crew","url":"https://groundsupportcrew.com/"}}</script><link rel="icon" type="image/svg+xml" href="favicon.svg"></head>
 <body>
