@@ -13,7 +13,7 @@ jobs:
       - name: Wait for current GitHub Pages deployment
         run: |
           for attempt in $(seq 1 40); do
-            if curl --silent --fail "https://125568-star.github.io/business_discovery/?nocache=${GITHUB_SHA}" | grep -q "pexels-photo-2516657"; then
+            if curl --silent --fail "https://125568-star.github.io/business_discovery/?nocache=${GITHUB_SHA}" | grep -q "background-position:center bottom"; then
               echo "Live site contains latest skyline asset"; exit 0
             fi
             sleep 5
@@ -27,7 +27,7 @@ jobs:
         run: |
           git config user.name "GitHub Actions"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -b verification-sharp-skyline-20261031
+          git checkout -b verification-final-alignment-20261031
           git add site-live.png
           git commit -m "Captured actual live site screenshot for visual verification"
           git push origin verification-sharp-skyline-20261031
