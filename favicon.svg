@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="13" fill="#fff"/><path d="M32 6C19 6 10 16 10 29c0 17 22 31 22 31s22-14 22-31C54 16 45 6 32 6Z" fill="#fa4b65" stroke="#12355b" stroke-width="3"/><circle cx="32" cy="28" r="9" fill="white"/><path d="M7 52l15-8 20 6 15-8v14L42 61l-20-6-15 6Z" fill="#59c78f" stroke="#12355b" stroke-width="2"/><path d="M22 44v11M42 50v11" stroke="#fff" stroke-width="3"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Business Discovery Network map and location pin">
+<path d="M4 45 22 38 42 44 60 37V56L42 62 22 55 4 61Z" fill="#fff" stroke="#27567f" stroke-width="2.2" stroke-linejoin="round"/>
+<path d="M6 46 22 40V54L6 59Z" fill="#54c87e"/>
+<path d="M22 40 42 46V60L22 54Z" fill="#f6d243"/>
+<path d="M42 46 58 40V54L42 60Z" fill="#60afe6"/>
+<path d="M6 52 22 47 42 52 58 47" fill="none" stroke="#fff" stroke-width="2"/>
+<path d="M32 3C20 3 12 11.8 12 23c0 15.1 20 29.8 20 29.8S52 38.1 52 23C52 11.8 44 3 32 3Z" fill="#f44367" stroke="#264d91" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="32" cy="22.5" r="9" fill="#f8f9fc" stroke="#fff" stroke-width="1"/>
+</svg>
