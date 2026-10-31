@@ -118,6 +118,11 @@ body{font-family:Arial,Helvetica,sans-serif}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(255,249,226,.86) 0%,rgba(255,250,233,.66) 20%,rgba(238,248,255,.20) 43%,transparent 73%),linear-gradient(180deg,rgba(47,164,255,.42) 0%,rgba(255,174,47,.12) 47%,rgba(249,148,26,.19) 100%);pointer-events:none}
 .hero .wrap{position:relative;z-index:1}
 .brand img{filter:drop-shadow(0 2px 1px #28365735)}
+
+/* 31 Oct composition adjustment: pan left, zoom out, reveal the river below Story Bridge. */
+.hero::before{background-size:100% auto;background-position:46% 73%;background-repeat:no-repeat;background-color:#a5d6f8}
+@media(max-width:900px){.hero::before{background-size:auto 115%;background-position:43% 77%}}
+@media(max-width:600px){.hero::before{background-size:auto 110%;background-position:42% 79%}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Business Discovery Network","url":"https://125568-star.github.io/business_discovery/","publisher":{"@type":"Organization","name":"Ground Support Crew","url":"https://groundsupportcrew.com/"}}</script><link rel="icon" type="image/svg+xml" href="favicon.svg?v=20261031-pin2"></head>
 <body>
