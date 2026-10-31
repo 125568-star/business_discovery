@@ -111,11 +111,18 @@ body{font-family:Arial,Helvetica,sans-serif}
 .feature{gap:22px}.feature i svg{width:53px;height:53px}.feature strong{font-size:21px}.feature span{font-size:17px}
 @media(max-width:920px){.nav{min-height:83px}.brand{font-size:19px}.brand img{width:54px;height:54px}.links{gap:13px}.links a{font-size:13px}.hero{min-height:510px}.hero .wrap{padding-top:64px}.category-shortcuts{grid-template-columns:repeat(3,1fr)}.features{grid-template-columns:1fr}}
 @media(max-width:650px){.nav{min-height:75px}.hero{min-height:460px;background-position:60% center}.hero .wrap{padding-top:55px;padding-bottom:78px}.hero h1{font-size:clamp(37px,9vw,52px)}.hero .intro{font-size:16px;margin-bottom:27px}.hero-search{min-height:57px;padding:6px}.hero-search input{font-size:12px}.hero-search .search-button{min-width:74px;height:46px;font-size:13px}.category-shortcuts{margin-top:-18px;padding:8px;gap:6px}.category-shortcuts a{min-height:82px;font-size:11px}.cat-icon{height:34px}.cat-icon svg{width:29px;height:29px}.feature strong{font-size:16px}.feature span{font-size:13px}}
+
+/* Brisbane hero: vivid blue/gold city treatment, matching approved composition. */
+.hero{isolation:isolate;background:#9ad5ff;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background-image:url("https://images.pexels.com/photos/2516657/pexels-photo-2516657.jpeg?cs=srgb&dl=pexels-valeriiamiller-2516657.jpg&fm=jpg");background-size:cover;background-position:center 61%;filter:saturate(1.9) contrast(1.23) brightness(1.12)}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(255,249,226,.86) 0%,rgba(255,250,233,.66) 20%,rgba(238,248,255,.20) 43%,transparent 73%),linear-gradient(180deg,rgba(47,164,255,.42) 0%,rgba(255,174,47,.12) 47%,rgba(249,148,26,.19) 100%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.brand img{filter:drop-shadow(0 2px 1px #28365735)}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Business Discovery Network","url":"https://125568-star.github.io/business_discovery/","publisher":{"@type":"Organization","name":"Ground Support Crew","url":"https://groundsupportcrew.com/"}}</script><link rel="icon" type="image/svg+xml" href="favicon.svg"></head>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Business Discovery Network","url":"https://125568-star.github.io/business_discovery/","publisher":{"@type":"Organization","name":"Ground Support Crew","url":"https://groundsupportcrew.com/"}}</script><link rel="icon" type="image/svg+xml" href="favicon.svg?v=20261031-pin2"></head>
 <body>
 <header class="top"><div class="wrap nav">
-<a class="brand" href="#home"><img src="favicon.svg" alt="Business Discovery location pin logo" width="54" height="54"><span>Business Discovery<br>Network</span></a>
+<a class="brand" href="#home"><img src="favicon.svg?v=20261031-pin2" alt="Business Discovery location pin logo" width="54" height="54"><span>Business Discovery<br>Network</span></a>
 <nav class="links" aria-label="Main navigation"><a class="active" href="#home">Home</a><a href="#directory">Browse</a><a href="#join">Add Listing</a><a href="#how">About</a><a class="nav-cta" href="#join">List a Business</a></nav>
 </div></header>
 <main><div id="home" class="hero"><div class="wrap hero-content"><h1><span>Discover</span>Brisbane Businesses</h1><p class="intro">Find and support great local businesses<br>in your community.</p><div class="hero-search" role="search"><span class="hero-search-icon" aria-hidden="true">⌕</span><input id="search" type="search" aria-label="Search businesses, categories or locations" placeholder="Search businesses, categories or locations..."><button id="search-button" class="search-button" type="button">Search</button></div></div></div>
