@@ -30,7 +30,7 @@ jobs:
           git checkout -b verification-sharp-skyline-20261031
           git add site-live.png
           git commit -m "Captured actual live site screenshot for visual verification"
-          git push origin verification-screenshot-20261031
+          git push origin verification-sharp-skyline-20261031
       - uses: actions/upload-artifact@v4
         if: always()
         with:
