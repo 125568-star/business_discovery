@@ -1,0 +1,29 @@
+name: Verify live Business Discovery design
+on:
+  push:
+    paths:
+      - '.github/workflows/visual-check.yml'
+permissions:
+  contents: write
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Capture published website
+        run: |
+          google-chrome --headless --no-sandbox --disable-gpu --hide-scrollbars --virtual-time-budget=8000 --window-size=1440,1050 --screenshot=site-live.png 'https://125568-star.github.io/business_discovery/?visualcheck=20261031'
+          file site-live.png
+      - name: Save verification screenshot in separate branch
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b verification-screenshot-20261031
+          git add site-live.png
+          git commit -m "Captured actual live site screenshot for visual verification"
+          git push origin verification-screenshot-20261031
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live-site-visual
+          path: site-live.png
