@@ -85,14 +85,40 @@ footer{padding:39px 0;background:#11254b;color:#fff}footer a{color:#bedcff}
 .hero-search .search-button{min-width:104px;min-height:48px;font-size:16px}
 .category-shortcuts{margin-top:-25px}
 @media(max-width:650px){.hero{background-position:63% center;min-height:435px}.hero::before{background:linear-gradient(90deg,#eaf5fffa,#eaf5ffdb 65%,#eaf5ff5a)}.hero h1{font-size:clamp(36px,8.6vw,50px)}.hero-search input{font-size:12px}.hero-search .search-button{min-width:70px;padding:0 12px;font-size:13px}}
+
+/* Approved 31 Oct screen composition: keep all functionality and source image untouched */
+body{font-family:Arial,Helvetica,sans-serif}
+.nav{min-height:100px}
+.brand{font-size:25px;line-height:1.04;gap:18px}
+.brand img{width:72px;height:72px}
+.links{gap:35px}
+.links a{font-size:16px}
+.links a.active{color:#0869e8;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:13px}
+.links .nav-cta{font-size:16px;padding:16px 26px}
+.hero{min-height:590px;align-items:stretch;background-size:cover;background-position:center 49%}
+.hero::before{background:linear-gradient(90deg,rgba(255,249,224,.78) 0%,rgba(245,248,255,.52) 26%,rgba(245,248,255,.15) 49%,transparent 78%)}
+.hero .wrap{padding-top:83px;padding-bottom:118px}
+.hero h1{font-size:clamp(52px,5.6vw,82px);line-height:1.01;font-weight:800;color:#090f3c;max-width:880px;margin:0 0 24px;letter-spacing:-.055em}
+.hero .intro{font-size:clamp(19px,2vw,27px);font-weight:600;color:#11183e;max-width:660px;margin:0 0 46px;line-height:1.32}
+.hero-search{min-height:82px;max-width:950px;padding:9px 11px;border:0;box-shadow:0 10px 30px #1e375d48}
+.hero-search-icon{font-size:41px}
+.hero-search input{font-size:19px}
+.hero-search .search-button{height:65px;min-width:170px;font-size:21px}
+.category-shortcuts{max-width:1300px;margin-top:-41px;gap:14px;padding:18px;border-radius:18px 18px 0 0;box-shadow:0 -6px 28px #10295320}
+.category-shortcuts a{min-height:112px;background:#f7f9fc;gap:8px;font-size:16px;border-radius:13px}
+.cat-icon{height:50px}.cat-icon svg{width:44px;height:44px}
+.features{max-width:1300px;min-height:125px;padding:12px 15px 21px}
+.feature{gap:22px}.feature i svg{width:53px;height:53px}.feature strong{font-size:21px}.feature span{font-size:17px}
+@media(max-width:920px){.nav{min-height:83px}.brand{font-size:19px}.brand img{width:54px;height:54px}.links{gap:13px}.links a{font-size:13px}.hero{min-height:510px}.hero .wrap{padding-top:64px}.category-shortcuts{grid-template-columns:repeat(3,1fr)}.features{grid-template-columns:1fr}}
+@media(max-width:650px){.nav{min-height:75px}.hero{min-height:460px;background-position:60% center}.hero .wrap{padding-top:55px;padding-bottom:78px}.hero h1{font-size:clamp(37px,9vw,52px)}.hero .intro{font-size:16px;margin-bottom:27px}.hero-search{min-height:57px;padding:6px}.hero-search input{font-size:12px}.hero-search .search-button{min-width:74px;height:46px;font-size:13px}.category-shortcuts{margin-top:-18px;padding:8px;gap:6px}.category-shortcuts a{min-height:82px;font-size:11px}.cat-icon{height:34px}.cat-icon svg{width:29px;height:29px}.feature strong{font-size:16px}.feature span{font-size:13px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Business Discovery Network","url":"https://125568-star.github.io/business_discovery/","publisher":{"@type":"Organization","name":"Ground Support Crew","url":"https://groundsupportcrew.com/"}}</script><link rel="icon" type="image/svg+xml" href="favicon.svg"></head>
 <body>
 <header class="top"><div class="wrap nav">
 <a class="brand" href="#home"><img src="favicon.svg" alt="Business Discovery location pin logo" width="54" height="54"><span>Business Discovery<br>Network</span></a>
-<nav class="links" aria-label="Main navigation"><a href="#directory">Directory</a><a href="#how">How it works</a><a href="#join">Join free</a><a class="nav-cta" href="https://groundsupportcrew.com/websites.html">Our Websites</a></nav>
+<nav class="links" aria-label="Main navigation"><a class="active" href="#home">Home</a><a href="#directory">Browse</a><a href="#join">Add Listing</a><a href="#how">About</a><a class="nav-cta" href="#join">List a Business</a></nav>
 </div></header>
-<main><div id="home" class="hero"><div class="wrap hero-content"><div class="eyebrow">Discover • Connect • Grow</div><h1><span>Discover</span>Brisbane Businesses</h1><p class="intro">Find and support great local businesses in your community.</p><div class="hero-search" role="search"><span class="hero-search-icon" aria-hidden="true">⌕</span><input id="search" type="search" aria-label="Search businesses, categories or locations" placeholder="Search businesses, categories or locations..."><button id="search-button" class="search-button" type="button">Search</button></div></div></div>
+<main><div id="home" class="hero"><div class="wrap hero-content"><h1><span>Discover</span>Brisbane Businesses</h1><p class="intro">Find and support great local businesses<br>in your community.</p><div class="hero-search" role="search"><span class="hero-search-icon" aria-hidden="true">⌕</span><input id="search" type="search" aria-label="Search businesses, categories or locations" placeholder="Search businesses, categories or locations..."><button id="search-button" class="search-button" type="button">Search</button></div></div></div>
 <div class="category-shortcuts wrap" aria-label="Browse business categories">
 <a href="#directory" data-lookup="food" aria-label="Find food and drink businesses"><span class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3v8m4-8v8M7 3v19M4 11h6M17 3c-3 3-3 9 0 11v8"/></svg></span>Food &amp; Drink</a>
 <a href="#directory" data-lookup="trade"><span class="cat-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 4a6 6 0 0 0-6 7L3 17a2.5 2.5 0 0 0 4 4l6-6a6 6 0 0 0 7-8l-4 4-3-3 4-4Z"/></svg></span>Trades &amp; Services</a>
