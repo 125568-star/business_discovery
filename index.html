@@ -119,11 +119,11 @@ body{font-family:Arial,Helvetica,sans-serif}
 .hero .wrap{position:relative;z-index:1}
 .brand img{filter:drop-shadow(0 2px 1px #28365735)}
 
-/* Shorter hero height with centered background: no horizontal repositioning. */
-.hero{min-height:495px}
-.hero::before{background-size:100% auto;background-position:center 55%;background-repeat:no-repeat}
+/* Single Brisbane image layer — fit entire vertical scene (sky, buildings, bridge and river). */
+.hero{min-height:495px;background-image:none!important;background-color:#d6ebfa!important}
+.hero::before{background-image:url("https://images.pexels.com/photos/2516657/pexels-photo-2516657.jpeg?cs=srgb&dl=pexels-valeriiamiller-2516657.jpg&fm=jpg");background-size:auto 100%;background-position:right center;background-repeat:no-repeat;background-color:#d6ebfa}
 .hero .wrap{padding-top:56px;padding-bottom:76px}
-@media(max-width:650px){.hero{min-height:420px}.hero::before{background-size:auto 100%;background-position:center 55%}.hero .wrap{padding-top:45px;padding-bottom:64px}}
+@media(max-width:650px){.hero{min-height:420px}.hero::before{background-size:auto 100%;background-position:66% center}.hero .wrap{padding-top:45px;padding-bottom:64px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Business Discovery Network","url":"https://125568-star.github.io/business_discovery/","publisher":{"@type":"Organization","name":"Ground Support Crew","url":"https://groundsupportcrew.com/"}}</script><link rel="icon" type="image/svg+xml" href="favicon.svg?v=20261031-pin2"></head>
 <body>
