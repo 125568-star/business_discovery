@@ -10,15 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Wait for current GitHub Pages deployment
+        run: |
+          for attempt in $(seq 1 40); do
+            if curl --silent --fail "https://125568-star.github.io/business_discovery/?nocache=${GITHUB_SHA}" | grep -q "pexels-photo-2516657"; then
+              echo "Live site contains latest skyline asset"; exit 0
+            fi
+            sleep 5
+          done
+          echo "Published page did not update" >&2; exit 1
       - name: Capture published website
         run: |
-          google-chrome --headless --no-sandbox --disable-gpu --hide-scrollbars --virtual-time-budget=8000 --window-size=1440,1050 --screenshot=site-live.png 'https://125568-star.github.io/business_discovery/?visualcheck=20261031'
+          google-chrome --headless --no-sandbox --disable-gpu --hide-scrollbars --virtual-time-budget=8000 --window-size=1440,950 --screenshot=site-live.png 'https://125568-star.github.io/business_discovery/?visualcheck=20261031'
           file site-live.png
       - name: Save verification screenshot in separate branch
         run: |
           git config user.name "GitHub Actions"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git checkout -b verification-screenshot-20261031
+          git checkout -b verification-sharp-skyline-20261031
           git add site-live.png
           git commit -m "Captured actual live site screenshot for visual verification"
           git push origin verification-screenshot-20261031
