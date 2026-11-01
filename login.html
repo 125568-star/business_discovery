@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quick Contacts | Login</title>
+<meta name="robots" content="noindex">
+<style>
+:root{font-family:Arial,Helvetica,sans-serif;color:#102b4b}*{box-sizing:border-box}body{margin:0;background:#e9f2f8;min-height:100vh;display:grid;place-items:center;padding:20px}main{width:min(440px,100%);background:white;border-radius:20px;overflow:hidden;box-shadow:0 18px 50px #153e5a20}header{padding:30px 28px;background:#102b4b;color:white}header h1{margin:0;font-size:26px}header p{margin:9px 0 0;color:#cde5f0}section{padding:28px}h2{margin:0 0 10px}p{line-height:1.5}.muted{color:#546477;font-size:14px}label{display:block;font-weight:bold;margin:16px 0 6px}input{width:100%;padding:12px;border:1px solid #b7c9d8;border-radius:8px;font:inherit}button{background:#006f97;color:white;padding:13px 18px;border:0;border-radius:9px;width:100%;font:700 16px Arial;cursor:pointer;margin-top:20px}button:disabled{background:#889da8;cursor:not-allowed}a{color:#076d90}nav{display:flex;justify-content:space-between;gap:10px;margin-top:20px;font-size:14px}.notice{background:#fff8dc;border:1px solid #eed78e;border-radius:8px;padding:12px;color:#6b4b06;font-size:13px}#message{font-size:14px}#message[role=alert]{color:#a51f1f}footer{text-align:center;padding:0 20px 22px;font-size:12px;color:#60738a}
+</style></head><body><main><header><h1>Brisbane Quick Contacts</h1><p>Residents &bull; Advertisers &bull; Admin</p></header><section>
+<h2 id="heading">Sign in</h2><p class="muted" id="intro">Use one account to access your rewards or advertiser dashboard.</p>
+<div class="notice" id="setupNotice">The secure account service is not yet connected. Registration and sign-in will become available when the dedicated Quick Contacts database is configured.</div>
+<form id="accountForm"><label for="email">Email address</label><input id="email" type="email" autocomplete="email" required><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" minlength="8" required><button type="submit" id="submit" disabled>Sign in</button></form>
+<p id="message" aria-live="polite"></p><nav><a href="#" id="switch">Create a resident account</a><a href="./">Back to directory</a></nav>
+<p class="muted">Advertiser accounts require approval. Administrator access is assigned privately. Residents can earn 100 points per approved monthly fridge-magnet photo after the rewards service launches.</p></section><footer>Ground Support Crew &bull; Brisbane Quick Contacts</footer></main>
+<script type="module">
+const config = {url:"",publishableKey:""}; // Configure only with a dedicated project. NEVER place secret/service-role keys here.
+const form=document.querySelector("#accountForm"), button=document.querySelector("#submit"), heading=document.querySelector("#heading"), intro=document.querySelector("#intro"), link=document.querySelector("#switch"), notice=document.querySelector("#setupNotice"), msg=document.querySelector("#message");
+let register=false,client=null;
+link.onclick=e=>{e.preventDefault();register=!register;heading.textContent=register?"Create resident account":"Sign in";intro.textContent=register?"Create a free account to join the fridge-magnet rewards program.":"Use one account to access your rewards or advertiser dashboard.";button.textContent=register?"Create account":"Sign in";link.textContent=register?"Already registered? Sign in":"Create a resident account";document.querySelector("#password").autocomplete=register?"new-password":"current-password"};
+if(config.url && config.publishableKey){
+ try{const m=await import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/+esm");client=m.createClient(config.url,config.publishableKey);button.disabled=false;notice.hidden=true}
+ catch(e){msg.setAttribute("role","alert");msg.textContent="Sign-in is temporarily unavailable."}
+}
+form.onsubmit=async e=>{e.preventDefault();if(!client)return;msg.removeAttribute("role");msg.textContent="Checking account…";button.disabled=true;try{const email=document.querySelector("#email").value.trim(),password=document.querySelector("#password").value;const res=register?await client.auth.signUp({email,password}):await client.auth.signInWithPassword({email,password});if(res.error)throw res.error;if(register){msg.textContent="Check your inbox to confirm your email, then sign in."}else{location.href="./account.html"}}catch(err){msg.setAttribute("role","alert");msg.textContent=err.message||"Unable to sign in."}finally{button.disabled=false}};
+</script></body></html>
