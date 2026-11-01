@@ -7,7 +7,25 @@
 .intro::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(255,252,236,.88),rgba(245,251,255,.72) 48%,rgba(255,255,255,.1) 100%)}
 .intro p{color:#203b5b}
 @media(max-width:650px){.intro{padding:35px 24px 28px}.intro::before{background-position:65% 85%}}
-</style></head><body><header><div class="wrap"><a class="brand" href="index.html"><img src="favicon.svg" alt="Business Discovery Network logo"><span>Business Discovery<br>Network</span></a><nav><a href="index.html">Home</a><a href="index.html#directory">Browse</a><a class="cta" href="index.html#join">List a Business</a></nav></div></header><main class="wrap"><section class="intro"><a href="index.html">← Back to Business Discovery Network</a><div class="eyebrow" style="margin-top:28px">Brisbane business guide</div><h1>Start Your Own Business in Brisbane</h1><p>From a first idea to opening day: follow these practical steps and use the official government services linked below.</p></section><section class="steps" aria-label="Steps to starting a business">
+
+/* Unified homepage-style layout: full-width photo first; all page content below. */
+body{background:#fff}
+header{background:#fff;border-bottom:1px solid #e1e8f1}
+header .wrap{min-height:100px}
+.brand{font-size:25px;font-weight:800;gap:18px;color:#0b2149}
+.brand img{width:72px;height:72px}
+nav{gap:35px}
+nav a{color:#0b2149;font-size:16px;font-weight:700}
+nav .btn,nav .cta{background:#0869e8;color:white;padding:16px 26px;border-radius:8px}
+.page-hero{display:block;width:100%;height:495px;background:#d6ebfa url("https://images.pexels.com/photos/2516657/pexels-photo-2516657.jpeg?cs=srgb&dl=pexels-valeriiamiller-2516657.jpg&fm=jpg") center 85% / cover no-repeat}
+main.wrap .page-hero{width:100vw;margin-left:calc(50% - 50vw)}
+.intro{position:static;isolation:auto;overflow:visible;background:none;margin:0 auto;padding:56px 24px 34px;max-width:1190px}
+.intro::before,.intro::after{content:none;display:none}
+main.wrap .intro{padding-left:0;padding-right:0;max-width:none}
+.intro p{color:#52627a}
+@media(max-width:920px){header .wrap{min-height:83px}.brand{font-size:19px}.brand img{width:54px;height:54px}nav{gap:13px}nav a{font-size:13px}}
+@media(max-width:650px){header .wrap{min-height:75px}.page-hero{height:340px;background-position:60% 85%}.intro{padding:35px 20px 24px}.brand{font-size:18px}.brand img{width:46px;height:46px}nav{gap:12px;flex-wrap:wrap}nav a{font-size:13px}nav .btn,nav .cta{padding:10px 12px}}
+</style></head><body><header><div class="wrap"><a class="brand" href="index.html"><img src="favicon.svg" alt="Business Discovery Network logo"><span>Business Discovery<br>Network</span></a><nav><a href="index.html">Home</a><a href="index.html#directory">Browse</a><a class="cta" href="index.html#join">List a Business</a></nav></div></header><main class="wrap"><div class="page-hero" role="img" aria-label="Brisbane skyline, river and bridge"></div><section class="intro"><a href="index.html">← Back to Business Discovery Network</a><div class="eyebrow" style="margin-top:28px">Brisbane business guide</div><h1>Start Your Own Business in Brisbane</h1><p>From a first idea to opening day: follow these practical steps and use the official government services linked below.</p></section><section class="steps" aria-label="Steps to starting a business">
 <div class="step"><h2><span>01</span>Research your idea</h2><p>Identify your customers, competitors, expected costs and likely demand. Test the idea and prepare a straightforward business plan and budget.</p><a href="https://www.business.qld.gov.au/starting-business" target="_blank" rel="noopener noreferrer">Business Queensland: Starting a business</a></div>
 <div class="step"><h2><span>02</span>Choose a business structure</h2><p>Decide whether to operate as a sole trader, partnership, company or trust. The structure affects your legal, tax and reporting responsibilities. Get professional advice where needed.</p><a href="https://business.gov.au/guide/starting" target="_blank" rel="noopener noreferrer">Australian Government: Guide to starting a business</a></div>
 <div class="step"><h2><span>03</span>Register the business</h2><p>Apply for an Australian Business Number (ABN) if eligible; the ABN registration itself is free. Register a business name if required, and arrange company or tax registrations as applicable.</p><a href="https://register.business.gov.au/" target="_blank" rel="noopener noreferrer">Australian Government: Business Registration Service</a></div>
